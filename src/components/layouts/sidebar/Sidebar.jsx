@@ -1,6 +1,7 @@
 import React from "react";
 import "./sidebar.css";
 import SidebarDropdowns from "./SidebarDropdowns";
+import logoImg from "../../../assets/team-3.jpg";
 import dropdown from "./dropdown";
 
 const Sidebar = (props) => {
@@ -13,20 +14,20 @@ const Sidebar = (props) => {
         onMouseOver={props.handleMouseOverSidebar}
         onMouseOut={props.handleMouseOutSidebar}
       >
-        <div className="sidebar-logo mb-2 bg-primary d-flex-row ps-2">
+        <div className="sidebar-logo mb-2 d-flex-row ps-2 ">
           <a
             href="#"
             className="d-flex align-items-center justify-content-center lg-screen-logo"
           >
-            <span className="d-lg-block text-white h4">Cognosphere</span>
-          </a>
-          <a
-            href="#"
-            className="d-flex align-items-center justify-content-center d-none sm-screen-logo"
-          >
-            <span className="d-lg-block text-primary fs-6 p-1 rounded-circle border border-primary eclasslink">
-              cd
-            </span>
+            <div className="rounded-circle w-50 me-2">
+              <img
+                src={logoImg}
+                alt="logo image"
+                className="w-100 d-block rounded-circle"
+              />
+            </div>
+
+            <span className="d-lg-block text-white h4">Pomote Uganda</span>
           </a>
         </div>
         <ul className="sidebar-nav" id="sidebar-nav">

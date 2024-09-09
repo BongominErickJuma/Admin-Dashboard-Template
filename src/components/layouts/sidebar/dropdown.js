@@ -1,96 +1,38 @@
 const dropdown = [
   {
-    label: "Overview",
+    label: "Dashboard",
     linkTo: "/",
     icon: "bi bi-house-door",
   },
   {
-    label: "Twogere",
-    linkTo: "#",
-    icon: "bi bi-flag",
-    chevron: "bi bi-chevron-down",
-    children: [
-      {
-        label: "Organizations",
-        linkTo: "/twogere-organizations",
-        icon: "bi bi-file-earmark-text",
-      },
-      {
-        label: "Individuals",
-        linkTo: "/twogere-individuals",
-        icon: "bi bi-person",
-      },
-      {
-        label: "Subscriptions",
-        linkTo: "/twogere-subscriptions",
-        icon: "bi bi-check-circle",
-      },
-    ],
+    label: "Content",
+    linkTo: "/content",
+    icon: "bi bi-file-earmark-text",
   },
   {
-    label: "YoDegree",
-    linkTo: "#",
-    icon: "bi bi-journals",
-    chevron: "bi bi-chevron-down",
-    children: [
-      {
-        label: "Institutions",
-        linkTo: "/yodegree-institutions",
-        icon: "bi bi-book",
-      },
-      {
-        label: "Individuals",
-        linkTo: "/yodegree-individuals",
-        icon: "bi bi-phone",
-      },
-      {
-        label: "Sessions",
-        linkTo: "/yodegree-sessions",
-        icon: "bi bi-activity",
-      },
-      {
-        label: "Subscriptions",
-        linkTo: "/assignments",
-        icon: "bi bi-check-circle",
-      },
-    ],
+    label: "Analytics",
+    linkTo: "/analytics",
+    icon: "bi bi-bar-chart",
   },
   {
-    label: "GoLive",
-    linkTo: "#",
-    icon: "bi bi-box",
-    chevron: "bi bi-chevron-down",
-    children: [
-      {
-        label: "Organizations",
-        linkTo: "/golive-organizations",
-        icon: "bi bi-tv",
-      },
-      {
-        label: "Individuals",
-        linkTo: "/golive-individuals",
-        icon: "bi bi-phone",
-      },
-      {
-        label: "Subscriptions",
-        linkTo: "/golive-subscriptions",
-        icon: "bi bi-check-circle",
-      },
-    ],
+    label: "End User",
+    linkTo: "/end-user",
+    icon: "bi bi-pie-chart",
   },
   {
-    label: "Mail",
-    linkTo: "#",
-    icon: "bi bi-envelope",
-    chevron: "bi bi-chevron-down",
-    children: [
-      { label: "Accounts", linkTo: "/students", icon: "bi bi-person" },
-    ],
+    label: "Revenue",
+    linkTo: "/revenue",
+    icon: "bi bi-coin",
   },
   {
-    label: "Administrators",
+    label: "Partners",
+    linkTo: "/partners",
+    icon: "bi bi-person",
+  },
+  {
+    label: "Promote TV",
     linkTo: "/calendar",
-    icon: "bi bi-people",
+    icon: "bi bi-tv",
   },
 ];
 export default dropdown;

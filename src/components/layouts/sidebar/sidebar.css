@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 200px;
+  width: 230px;
   z-index: 996;
   transition: all 0.3s;
   padding: 0;
@@ -17,7 +17,8 @@
 }
 
 .sidebar-logo {
-  height: 100px;
+  height: 200px;
+  background: var(--danger-color);
 }
 
 .sidebar::-webkit-scrollbar {
@@ -34,7 +35,7 @@
   #main,
   #header,
   #footer {
-    margin-left: 200px;
+    margin-left: 230px;
   }
 }
 
@@ -69,7 +70,7 @@
   display: flex;
   align-items: center;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: bold;
   color: var(--background-color-deep);
   transition: 0.3;
   background: var(--default-color);
@@ -84,27 +85,27 @@
 }
 
 .sidebar-nav .nav-link:hover {
-  color: var(--accent-color-hover);
-  background: var(--background-color);
-}
-
-.sidebar-nav .nav-link:hover i {
-  color: var(--accent-color-hover);
+  background: rgba(52, 114, 239, 0.2);
 }
 
 .sidebar-nav .nav-link.active {
-  color: var(--accent-color);
+  color: var(--sidebar-blue);
+  background: rgba(52, 114, 239, 0.2);
 }
 
 .sidebar-nav .nav-link.active i {
-  color: var(--accent-color);
+  color: var(--sidebar-blue);
 }
 
 .sidebar-nav .nav-link.has-children i,
 .sidebar-nav .nav-link.has-children {
-  color: var(--background-color-deep) !important;
+  color: var(--background-color-deep);
+  background: none;
 }
 
+.sidebar-nav .nav-link.has-children:hover {
+  background: rgba(52, 114, 239, 0.2);
+}
 .sidebar-nav .nav-content {
   padding: 5px 0 0 0;
   margin: 0;
@@ -117,7 +118,7 @@
   font-size: 14px;
   font-weight: 300;
   transition: 0.3;
-  color: var(--default-color);
+  color: var(--background-color-deep);
   padding: 10px 0 10px 40px;
   transition: 0.3s;
 }
@@ -132,6 +133,7 @@
 .sidebar-nav .nav-content a:hover,
 .sidebar-nav .nav-content a.active {
   color: var(--accent-color);
+  background: rgba(52, 114, 239, 0.2);
 }
 
 .toggle-sidebar #main,

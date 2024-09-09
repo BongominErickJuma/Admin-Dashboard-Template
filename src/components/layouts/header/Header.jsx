@@ -1,44 +1,35 @@
 import React from "react";
 import "./header.css";
 import profileImage from "../../../assets/team-5.jpg";
-import Notifications from "./Notifications";
 import Profile from "./Profile";
 
 const Header = () => {
   return (
     <div>
-      <header
-        id="header"
-        className="header fixed-top d-flex align-items-center"
-      >
+      <header id="header" className="header  d-flex align-items-start">
         {/* end logo */}
-        <nav className="header-nav ms-auto">
+        <div className="welcome px-3 py-4">
+          <h1>Hello, Admin</h1>
+          <p>Welcome to he dashboad</p>
+        </div>
+        <nav className="header-nav ms-auto px-3 py-4 d-flex flex-column align-items-end justify-content-between h-100">
           <ul className="d-flex align-items-end">
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link nav-icon"
-                href="#"
-                data-bs-toggle="dropdown"
-              >
-                <i className="bi bi-question-circle"></i>
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link nav-icon"
-                href="#"
-                data-bs-toggle="dropdown"
-              >
-                <i className="bi bi-bell"></i>
-                <span className="badge bg-primary badge-number">4</span>{" "}
-              </a>
-
-              <Notifications />
+            <li className="nav-item dropdown me-3">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Dollar amount (with dot and two decimal places)"
+                />
+                <span class="input-group-text">
+                  <i className="bi bi-search"></i>
+                </span>
+              </div>
             </li>
 
-            <li className="nav-item dropdown pe-3">
+            <li className="nav-item dropdown p-2  rounded bg-white">
               <a
-                className="nav-link nav-profile d-flex align-items-end pe-0"
+                className="nav-link nav-profile d-flex align-items-center pe-0"
                 href="#"
                 data-bs-toggle="dropdown"
               >
@@ -47,11 +38,17 @@ const Header = () => {
                   alt="Profile"
                   className="rounded-circle"
                 />
+                <span className="d-none d-md-block dropdown-toggle ps-2">
+                  John Doe
+                </span>
               </a>
 
               <Profile />
             </li>
           </ul>
+          <button className="btn btn-sm btn-primary rounded-5 px-3 d-flex align-items-center">
+            <i className="bi bi-plus fs-4"></i> Add New Event
+          </button>
         </nav>
       </header>
     </div>

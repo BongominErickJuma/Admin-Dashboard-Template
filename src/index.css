@@ -11,8 +11,9 @@
   scroll-behavior: smooth;
   --background-color: #fcf8f3;
   --default-color: #333333;
-  --accent-color: #388da8;
-  --accent-color-hover: #6dc5d1;
+  --accent-color: #219c90;
+  --sidebar-blue: #3572ef;
+  --accent-color-hover: #219c90;
   --surface-color: #f9f9f9;
   --background-color-deep: #f5f7f8;
   --background-color-deep-hover: #f2f2f2;
@@ -103,7 +104,6 @@ ul > li {
 }
 
 #main {
-  margin-top: 100px;
   padding: 20px 30px;
   transition: all 0.3s;
   min-height: 95vh;
@@ -122,4 +122,10 @@ ul > li {
 .card {
   border: none;
   box-shadow: 2px 2px 4px 0px rgba(235, 235, 235, 1);
+}
+
+.form-control,
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #ccc;
 }
