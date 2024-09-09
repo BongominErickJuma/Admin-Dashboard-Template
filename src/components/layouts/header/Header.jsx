@@ -4,24 +4,13 @@ import profileImage from "../../../assets/team-5.jpg";
 import Notifications from "./Notifications";
 import Profile from "./Profile";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div>
       <header
         id="header"
-        className="header fixed-top d-flex align-items-center border-bottom"
+        className="header fixed-top d-flex align-items-center"
       >
-        <div className="d-flex align-items-end ">
-          <i
-            className={`bi bi-list toggle-sidebar-btn `}
-            onClick={props.handleToggleSidebar}
-          ></i>
-
-          {/* <p className="ms-2">Bongomin Erick Juma |</p>
-          <p className="ms-2">cse semester 8 |</p>
-          <p className="ms-2 text-info">active.</p> */}
-        </div>
-
         {/* end logo */}
         <nav className="header-nav ms-auto">
           <ul className="d-flex align-items-end">

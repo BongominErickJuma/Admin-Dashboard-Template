@@ -9,7 +9,7 @@
 
 :root {
   scroll-behavior: smooth;
-  --background-color: #f9f9f9;
+  --background-color: #fcf8f3;
   --default-color: #333333;
   --accent-color: #388da8;
   --accent-color-hover: #6dc5d1;
@@ -103,7 +103,7 @@ ul > li {
 }
 
 #main {
-  margin-top: 60px;
+  margin-top: 100px;
   padding: 20px 30px;
   transition: all 0.3s;
   min-height: 95vh;

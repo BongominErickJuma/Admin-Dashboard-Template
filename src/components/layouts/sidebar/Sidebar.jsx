@@ -13,14 +13,12 @@ const Sidebar = (props) => {
         onMouseOver={props.handleMouseOverSidebar}
         onMouseOut={props.handleMouseOutSidebar}
       >
-        <div className="sidebar-logo mb-2">
+        <div className="sidebar-logo mb-2 bg-primary d-flex-row ps-2">
           <a
             href="#"
             className="d-flex align-items-center justify-content-center lg-screen-logo"
           >
-            <span className="d-lg-block text-primary h4 eclasslink">
-              Cognosphere
-            </span>
+            <span className="d-lg-block text-white h4">Cognosphere</span>
           </a>
           <a
             href="#"
