@@ -98,7 +98,7 @@
 .header {
   transition: all 0.3s;
   z-index: 997;
-  height: 200px;
+  height: 150px;
   background-color: var(--background-color);
 }
 

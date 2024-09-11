@@ -1,52 +1,18 @@
 // App.jsx
-import React, { useState } from "react";
-import Header from "./components/layouts/header/Header";
-import Sidebar from "./components/layouts/sidebar/Sidebar";
-import Footer from "./components/layouts/footer/Footer";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import SignUp from "./pages/SignUp/SignUp";
 const App = () => {
-  const [isSidebarToggled, setIsSidebarToggled] = useState(false);
-  const [isSidebarHovered, setIsSidebarHovered] = useState(false);
-
-  const handleToggleSidebar = () => {
-    setIsSidebarToggled(!isSidebarToggled);
-    if (!isSidebarToggled) {
-      setIsSidebarHovered(false);
-    }
-  };
-
-  const handleMouseOverSidebar = () => {
-    if (isSidebarToggled) {
-      setIsSidebarHovered(true);
-    }
-  };
-
-  const handleMouseOutSidebar = () => {
-    if (isSidebarToggled) {
-      setIsSidebarHovered(false);
-    }
-  };
-
   return (
     <Router>
-      <div
-        className={`${
-          isSidebarToggled && !isSidebarHovered ? "toggle-sidebar" : ""
-        } ${isSidebarHovered ? "hover-sidebar" : ""}`}
-      >
-        <Header handleToggleSidebar={handleToggleSidebar} />
-        <Sidebar
-          handleMouseOverSidebar={handleMouseOverSidebar}
-          handleMouseOutSidebar={handleMouseOutSidebar}
-          isSidebarHovered={isSidebarHovered}
-        />
-        <div className="min-vh-100 main" id="main">
-          <Routes>
-            <Route path="*" element={<h1>Page not found</h1>} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
+      <Routes>
+        <Route exact path="/" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<h1>Page not found</h1>} />
+      </Routes>
     </Router>
   );
 };

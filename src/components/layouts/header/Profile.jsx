@@ -4,7 +4,7 @@ const Profile = () => {
   return (
     <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
       <li className="dropdown-header">
-        <h6>Bongomin Erick Juma</h6>
+        <h6>John Doe</h6>
       </li>
       <li>
         <hr className="dropdown-divider" />

@@ -17,8 +17,27 @@
 }
 
 .sidebar-logo {
-  height: 200px;
+  height: 130px;
   background: var(--danger-color);
+}
+.sidebar-logo .logo-container {
+  height: 100%;
+}
+
+.sidebar-logo .img-container {
+  height: 60%;
+  background-color: rgba(242, 157, 184, 0.5);
+  border-radius: 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-logo .img-container img {
+  display: block;
+  max-width: 70%;
+  max-height: 70%;
 }
 
 .sidebar::-webkit-scrollbar {

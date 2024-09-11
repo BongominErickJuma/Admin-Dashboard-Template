@@ -1,34 +1,19 @@
 import React from "react";
 import "./sidebar.css";
 import SidebarDropdowns from "./SidebarDropdowns";
-import logoImg from "../../../assets/team-3.jpg";
 import dropdown from "./dropdown";
 
-const Sidebar = (props) => {
+const Sidebar = () => {
   return (
     <div>
-      <aside
-        id="sidebar"
-        // className={`sidebar ${props.isSidebarHovered ? "sidebar-hovered" : ""}`}
-        className={`sidebar ${props.isSidebarHovered ? "sidebar-hovered" : ""}`}
-        onMouseOver={props.handleMouseOverSidebar}
-        onMouseOut={props.handleMouseOutSidebar}
-      >
-        <div className="sidebar-logo mb-2 d-flex-row ps-2 ">
-          <a
-            href="#"
-            className="d-flex align-items-center justify-content-center lg-screen-logo"
-          >
-            <div className="rounded-circle w-50 me-2">
-              <img
-                src={logoImg}
-                alt="logo image"
-                className="w-100 d-block rounded-circle"
-              />
+      <aside id="sidebar" className="sidebar">
+        <div className="sidebar-logo d-flex align-items-center justify-content-center">
+          <div className="d-flex align-items-center justify-content-center logo-container">
+            <div className="img-container">
+              <img src="./images/logo-crane.png" alt="logo image" />
             </div>
-
-            <span className="d-lg-block text-white h4">Pomote Uganda</span>
-          </a>
+            <h4 className="text-white ms-2">Pomote Uganda</h4>
+          </div>
         </div>
         <ul className="sidebar-nav" id="sidebar-nav">
           {dropdown.map((item, index) => (

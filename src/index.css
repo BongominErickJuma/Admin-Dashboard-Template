@@ -20,7 +20,6 @@
   --danger-color: #f5004f;
   --font-primary: "Montserrat", sans-serif;
   --font-secondary: "League Spartan", sans-serif;
-  --font-quotes: "Edu VIC WA NT Beginner", sans-serif;
 }
 
 body {
@@ -58,6 +57,10 @@ ul {
 ul > li {
   padding: 0;
   margin: 0;
+}
+.bg-dark {
+  background-color: var(--default-color) !important;
+  color: var(--background-color) !important;
 }
 
 .btn-primary,

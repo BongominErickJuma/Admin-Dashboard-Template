@@ -1,6 +1,5 @@
 import React from "react";
 import "./header.css";
-import profileImage from "../../../assets/team-5.jpg";
 import Profile from "./Profile";
 
 const Header = () => {
@@ -34,7 +33,7 @@ const Header = () => {
                 data-bs-toggle="dropdown"
               >
                 <img
-                  src={profileImage}
+                  src="images/profile_pic.png"
                   alt="Profile"
                   className="rounded-circle"
                 />
@@ -46,7 +45,7 @@ const Header = () => {
               <Profile />
             </li>
           </ul>
-          <button className="btn btn-sm btn-primary rounded-5 px-3 d-flex align-items-center">
+          <button className="btn btn-sm btn-primary rounded-5 py-0 px-3 d-flex align-items-center">
             <i className="bi bi-plus fs-4"></i> Add New Event
           </button>
         </nav>

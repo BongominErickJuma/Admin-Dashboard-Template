@@ -1,7 +1,7 @@
 const dropdown = [
   {
     label: "Dashboard",
-    linkTo: "/",
+    linkTo: "/dashboard",
     icon: "bi bi-house-door",
   },
   {
