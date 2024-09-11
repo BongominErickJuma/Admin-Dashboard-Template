@@ -1,0 +1,13 @@
+/* Add this to your CSS file or inside a <style> tag */
+.custom-select {
+  font-size: 1rem !important;
+  padding: 0.65em;
+}
+
+.content-navbar .navbar-item {
+  padding: 1em 0;
+}
+.content-navbar .navbar-item:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+}

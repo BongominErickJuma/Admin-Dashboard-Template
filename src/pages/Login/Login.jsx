@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-lg-5 min-vh-100">
+        <div className="col-lg-5 min-vh-100 d-flex flex-column align-items-center justify-content-center">
           <img src="./images/logo-no-bg.png" alt="crane logo" />
           <div>
             <h3>Welcome to the Promote Uganda Dashboard!</h3>

@@ -1,0 +1,8 @@
+.analytics .card-title {
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.analytics .apexcharts-menu-icon {
+  display: none;
+}

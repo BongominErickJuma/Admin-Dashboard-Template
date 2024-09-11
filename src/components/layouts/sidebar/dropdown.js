@@ -31,8 +31,8 @@ const dropdown = [
   },
   {
     label: "Promote TV",
-    linkTo: "/calendar",
-    icon: "bi bi-tv",
+    linkTo: "/promote-tv",
+    icon: "bi bi-easel",
   },
 ];
 export default dropdown;
