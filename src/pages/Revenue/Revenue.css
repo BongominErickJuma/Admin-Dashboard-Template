@@ -1,0 +1,12 @@
+.revenue .stat-item {
+  height: 180px;
+}
+.revenue .stat-item .card {
+  height: 180px;
+  background: #303030;
+  color: white;
+}
+
+.revenue .apexcharts-menu-icon {
+  display: none;
+}

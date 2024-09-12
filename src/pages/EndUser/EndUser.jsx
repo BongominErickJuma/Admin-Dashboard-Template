@@ -6,8 +6,15 @@ const EndUser = () => {
     <div>
       <Sidebar />
       <div id="main">
-        <h1>End User</h1>
-        {/* Add your analytics code here */}
+        <h1>Users Management Dashboard</h1>
+        <p>
+          Manage all user information and settings for different products and
+          stakeholders here.
+        </p>
+        <div className="d-flex align-items-center justify-content-between">
+          <h4>Search Users</h4>
+          <input type="search" />
+        </div>
       </div>
     </div>
   );

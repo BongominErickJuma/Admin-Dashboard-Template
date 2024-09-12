@@ -132,3 +132,18 @@ ul > li {
   box-shadow: none;
   border: 1px solid #ccc;
 }
+
+/* calendar css */
+
+.days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin-bottom: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}

@@ -3,6 +3,8 @@ import Header from "../../components/layouts/header/Header";
 import Sidebar from "../../components/layouts/sidebar/Sidebar";
 import * as echarts from "echarts";
 import "./Dashboard.css";
+import ColumnChart from "../../components/UI/ColumnChart";
+import Calendar from "../../components/UI/Calendar";
 
 const Dashboard = () => {
   // Initialize charts
@@ -366,7 +368,7 @@ const Dashboard = () => {
         </div>
 
         <div className="row gx-2 mt-5">
-          <div className="col-lg-9">
+          <div className="col-lg-8">
             <div className="card bg-white">
               <div className="card-body">
                 <h3 className="border-bottom">Recent Subscriptions</h3>
@@ -476,11 +478,17 @@ const Dashboard = () => {
                 </table>
               </div>
             </div>
+            <ColumnChart />
           </div>
 
-          <div className="col-lg-3">
+          <div className="col-lg-4">
             <div className="card bg-white">
               <div className="card-body pb-0">
+                <h3 className="card-title border-bottom">
+                  Calendar Event Tracker
+                </h3>
+
+                <Calendar />
                 <h3 className="card-title border-bottom">
                   All Reviews From Stakeholders
                 </h3>

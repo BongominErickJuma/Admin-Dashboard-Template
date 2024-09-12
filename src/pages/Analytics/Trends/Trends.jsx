@@ -65,7 +65,7 @@ const Trends = () => {
 
   return (
     <div className="row mt-5">
-      <div className="col-lg-6">
+      <div className="col-lg-7">
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Current Trends</h5>
@@ -106,7 +106,7 @@ const Trends = () => {
           </div>
         </div>
       </div>
-      <div className="col-lg-6">
+      <div className="col-lg-5">
         <div className="card bg-white">
           <div className="card-body">
             <h5 className="card-title">Growth Trend</h5>

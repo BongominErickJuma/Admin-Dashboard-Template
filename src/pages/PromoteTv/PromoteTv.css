@@ -1,0 +1,16 @@
+.promote .nav-tabs .nav-link,
+.promote .nav-tabs {
+  border-width: 0 !important;
+  background-color: inherit !important;
+  color: #303030 !important;
+}
+.promote .nav-link:hover {
+  background: rgba(245, 0, 79, 0.3) !important;
+}
+.promote .nav-link.active {
+  border-bottom: 2px solid #219c90 !important;
+  font-weight: bold !important;
+}
+.promote .card {
+  box-shadow: none !important;
+}
