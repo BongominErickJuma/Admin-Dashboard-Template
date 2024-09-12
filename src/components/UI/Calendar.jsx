@@ -45,6 +45,9 @@ const October2024Calendar = () => {
 
   return (
     <div className="calendar-container mb-3">
+      <h6 className="">
+        {month},{year}
+      </h6>
       {renderDaysOfWeek()}
       {renderDays()}
     </div>
