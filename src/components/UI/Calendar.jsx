@@ -1,57 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
+import moment from "moment";
+import "./Calendar.css";
 
-const October2024Calendar = () => {
-  const month = "October";
-  const year = 2024;
-  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const Calendar = () => {
+  const [month, setMonth] = useState(moment());
+  const [selected, setSelected] = useState(moment().startOf("day"));
 
-  // Get number of days in October 2024
-  const daysInMonth = new Date(year, 10, 0).getDate(); // October is month 9 (0-indexed)
-
-  // Get the starting day of the week for October 2024
-  const firstDayOfWeek = new Date(year, 9, 1).getDay();
-
-  const renderDaysOfWeek = () => {
-    return (
-      <div className="days-of-week">
-        {daysOfWeek.map((day, index) => (
-          <div key={index} className="day-of-week">
-            {day}
-          </div>
-        ))}
-      </div>
-    );
+  const previousMonth = () => {
+    setMonth(month.clone().subtract(1, "month"));
   };
 
-  const renderDays = () => {
-    const days = [];
+  const nextMonth = () => {
+    setMonth(month.clone().add(1, "month"));
+  };
 
-    // Empty cells for days before October 1st, 2024
-    for (let i = 0; i < firstDayOfWeek; i++) {
-      days.push(<div key={`empty-${i}`} className="empty-day"></div>);
+  const selectDay = (day) => {
+    setSelected(day);
+  };
+
+  const renderWeeks = () => {
+    let weeks = [];
+    let date = month.clone().startOf("month").startOf("week");
+    let currentMonthIndex = month.month();
+
+    for (let week = 0; week < 5; week++) {
+      let days = [];
+
+      for (let i = 0; i < 7; i++) {
+        let isCurrentMonth = date.month() === currentMonthIndex;
+        let isToday = date.isSame(new Date(), "day");
+        let isSelected = date.isSame(selected, "day");
+
+        days.push(
+          <td
+            key={date.toString()}
+            className={`day ${isCurrentMonth ? "" : "different-month"} ${
+              isToday ? "today" : ""
+            } ${isSelected ? "selected" : ""}`}
+            onClick={() => selectDay(date)}
+          >
+            {date.date()}
+          </td>
+        );
+
+        date.add(1, "day");
+      }
+
+      weeks.push(<tr key={week}>{days}</tr>);
     }
 
-    // Actual days of October 2024
-    for (let day = 1; day <= daysInMonth; day++) {
-      days.push(
-        <div key={`day-${day}`} className="calendar-day">
-          {day}
-        </div>
-      );
-    }
-
-    return <div className="calendar-grid">{days}</div>;
+    return weeks;
   };
 
   return (
-    <div className="calendar-container mb-3">
-      <h6 className="">
-        {month},{year}
-      </h6>
-      {renderDaysOfWeek()}
-      {renderDays()}
+    <div className="calendar mb-3">
+      <header className="calendar-header">
+        <div className="month-display">
+          <span className="month-label">{month.format("MMMM YYYY")}</span>
+          <div>
+            <span className="arrow" onClick={previousMonth}>
+              {"<"}
+            </span>
+            <span className="arrow" onClick={nextMonth}>
+              {">"}
+            </span>
+          </div>
+        </div>
+        <div className="day-names my-2">
+          <span>Sun</span>
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+        </div>
+      </header>
+      <table>
+        <tbody>{renderWeeks()}</tbody>
+      </table>
     </div>
   );
 };
 
-export default October2024Calendar;
+export default Calendar;

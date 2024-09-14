@@ -18,14 +18,26 @@ const TableStat = () => {
           </thead>
           <tbody>
             <tr>
-              <td>Brandon Jacob</td>
+              <td>
+                <span className="px-2 py-1 text-white fw-bold my-2 rounded me-2 bg-warning">
+                  B
+                </span>
+                Bonny Tom
+              </td>
               <td>
                 <button className="btn btn-sm btn-warning text-white">
                   premium
                 </button>
               </td>
-              <td>email@example.com</td>
-              <td>2016-05-25</td>
+              <td>em***@google.com</td>
+              <td
+                style={{
+                  fontSize: "14px",
+                  verticalAlign: "middle",
+                }}
+              >
+                2016-05-25
+              </td>
               <td>
                 <a href="#" className="text-success">
                   view
@@ -36,14 +48,26 @@ const TableStat = () => {
               </td>
             </tr>
             <tr>
-              <td>Bridie Kessler</td>
+              <td>
+                <span className="px-2 py-1 text-white fw-bold my-2 rounded me-2 bg-info">
+                  F
+                </span>
+                F*** B**
+              </td>
               <td>
                 <button className="btn btn-sm btn-info text-white">
                   standard
                 </button>
               </td>
-              <td>email@example.com</td>
-              <td>2014-12-05</td>
+              <td>em***@google.com</td>
+              <td
+                style={{
+                  fontSize: "14px",
+                  verticalAlign: "middle",
+                }}
+              >
+                2014-12-05
+              </td>
               <td>
                 <a href="#" className="text-success">
                   view
@@ -54,14 +78,26 @@ const TableStat = () => {
               </td>
             </tr>
             <tr>
-              <td>Ashleigh Langosh</td>
+              <td>
+                <span className="px-2 py-1 text-white fw-bold my-2 rounded me-2 bg-danger">
+                  K
+                </span>
+                K*** S**
+              </td>
               <td>
                 <button className="btn btn-sm btn-info text-white">
                   standard
                 </button>
               </td>
-              <td>email@example.com</td>
-              <td>2011-08-12</td>
+              <td>em***@google.com</td>
+              <td
+                style={{
+                  fontSize: "14px",
+                  verticalAlign: "middle",
+                }}
+              >
+                2011-08-12
+              </td>
               <td>
                 <a href="#" className="text-success">
                   view
@@ -72,14 +108,26 @@ const TableStat = () => {
               </td>
             </tr>
             <tr>
-              <td>Angus Grady</td>
+              <td>
+                <span className="px-2 py-1 text-white fw-bold my-2 rounded me-2 bg-success">
+                  E
+                </span>
+                E*** J**
+              </td>
               <td>
                 <button className="btn btn-sm btn-warning text-white">
                   premium
                 </button>
               </td>
-              <td>email@example.com</td>
-              <td>2012-06-11</td>
+              <td>em***@google.com</td>
+              <td
+                style={{
+                  fontSize: "14px",
+                  verticalAlign: "middle",
+                }}
+              >
+                2012-06-11
+              </td>
               <td>
                 <a href="#" className="text-success">
                   view
@@ -90,14 +138,26 @@ const TableStat = () => {
               </td>
             </tr>
             <tr>
-              <td>Raheem Lehner</td>
+              <td>
+                <span className="px-2 py-1 text-white fw-bold my-2 rounded me-2 bg-primary">
+                  R
+                </span>
+                R*** S**
+              </td>
               <td>
                 <button className="btn btn-sm btn-warning text-white">
                   premium
                 </button>
               </td>
-              <td>email@example.com</td>
-              <td>2011-04-19</td>
+              <td>em***@google.com</td>
+              <td
+                style={{
+                  fontSize: "14px",
+                  verticalAlign: "middle",
+                }}
+              >
+                2011-04-19
+              </td>
               <td>
                 <a href="#" className="text-success">
                   view

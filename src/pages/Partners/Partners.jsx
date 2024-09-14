@@ -21,7 +21,9 @@ const Partners = () => {
               id="user"
               placeholder="Enter Username"
             />
-            <button className="btn btn-primary ms-2">Add User</button>
+            <button className="btn btn-warning text-white ms-2">
+              Add User
+            </button>
           </div>
         </div>
         <ColumnChart title="Total Content Created" />

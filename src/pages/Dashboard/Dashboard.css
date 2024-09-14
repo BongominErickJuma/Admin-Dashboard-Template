@@ -79,9 +79,45 @@
   align-items: center;
   justify-content: space-between;
 }
-
-.stat-graph b {
-  text-wrap: nowrap;
-  width: 40%;
+.truncated {
+  display: inline-block;
+  max-width: 100px; /* Adjust this based on your layout */
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle; /* Ensure it aligns well with surrounding elements */
+}
+
+.truncated::after {
+  content: attr(data-full-text); /* Display full text */
+  position: absolute;
+  left: 50%; /* Center the tooltip horizontally */
+  transform: translateX(-50%); /* Shift it to truly center */
+  top: 120%; /* Position the tooltip below the text */
+  background-color: rgba(0, 0, 0, 0.8); /* Tooltip background */
+  color: #fff; /* Tooltip text color */
+  padding: 6px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999; /* Ensure tooltip is on top of all other elements */
+}
+
+.truncated:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dashboard .btn-warning {
+  background: rgba(250, 188, 63, 0.5) !important;
+  border: 1px solid rgba(236, 168, 11, 1) !important;
+}
+.dashboard .btn-info {
+  background-color: rgba(118, 149, 255, 0.5);
+  border: 1px solid rgb(118, 149, 255);
 }

@@ -1,0 +1,9 @@
+.donut-chart-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.donut-chart-container .apexcharts-canvas {
+  margin-left: 0 !important; /* Override any margin added to the chart */
+}

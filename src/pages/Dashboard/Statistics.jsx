@@ -1,6 +1,35 @@
 import React from "react";
+import SmoothLineChart from "../../components/UI/SmoothLineChart";
+
+// Function to shuffle an array
+const shuffleArray = (array) => {
+  let currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex !== 0) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+};
+
+// Create an array from 0 to 80
+const createArrayFrom0To80 = () => {
+  return Array.from({ length: 81 }, (_, i) => i);
+};
 
 const Statistics = () => {
+  const shuffledArray = shuffleArray(createArrayFrom0To80());
+
   return (
     <div className="statistics d-flex align-items-center justify-content-between">
       <div className="stat-item">
@@ -40,8 +69,12 @@ const Statistics = () => {
             <div className="d-flex align-items-center justify-content-start borser">
               <div className="w-100">
                 <div className="stat-graph">
-                  <b>User Grwoth</b>
-                  <span>graph</span>
+                  <b className="truncated" data-full-text="User Growth">
+                    User Growth
+                  </b>
+                  <SmoothLineChart
+                    array={shuffledArray.slice(0, 12)} // Show only the first 12 values
+                  />
                 </div>
                 <div className="progress mt-3">
                   <div
@@ -64,6 +97,9 @@ const Statistics = () => {
           </div>
         </div>
       </div>
+
+      {/* Repeat similar structure for other cards */}
+
       <div className="stat-item">
         <div className="card info-card sales-card">
           <div className="filter">
@@ -101,8 +137,12 @@ const Statistics = () => {
             <div className="d-flex align-items-center justify-content-start">
               <div className="w-100">
                 <div className="stat-graph">
-                  <b>Engagement matrics</b>
-                  <span>graph</span>
+                  <b className="truncated" data-full-text="Engagement matrics">
+                    Engagement matrics
+                  </b>
+                  <SmoothLineChart
+                    array={shuffledArray.slice(0, 12)} // Show only the first 12 values
+                  />
                 </div>
                 <div className="progress mt-3">
                   <div
@@ -125,6 +165,7 @@ const Statistics = () => {
           </div>
         </div>
       </div>
+
       <div className="stat-item">
         <div className="card info-card sales-card">
           <div className="filter">
@@ -162,8 +203,15 @@ const Statistics = () => {
             <div className="d-flex align-items-center justify-content-start borser">
               <div className="w-100">
                 <div className="stat-graph">
-                  <b>Booking and conversion rate</b>
-                  <span>graph</span>
+                  <b
+                    className="truncated"
+                    data-full-text="Booking and conversion rate"
+                  >
+                    Booking and conversion rate
+                  </b>
+                  <SmoothLineChart
+                    array={shuffledArray.slice(0, 12)} // Show only the first 12 values
+                  />
                 </div>
                 <div className="progress mt-3">
                   <div
@@ -186,6 +234,7 @@ const Statistics = () => {
           </div>
         </div>
       </div>
+
       <div className="stat-item">
         <div className="card info-card sales-card">
           <div className="filter">
@@ -223,8 +272,15 @@ const Statistics = () => {
             <div className="d-flex align-items-center justify-content-start borser">
               <div className="w-100">
                 <div className="stat-graph">
-                  <b>Content engagement rate</b>
-                  <span>graph</span>
+                  <b
+                    className="truncated"
+                    data-full-text="Content engagement rate"
+                  >
+                    Content engagement rate
+                  </b>
+                  <SmoothLineChart
+                    array={shuffledArray.slice(0, 12)} // Show only the first 12 values
+                  />
                 </div>
                 <div className="progress mt-3">
                   <div
@@ -247,6 +303,7 @@ const Statistics = () => {
           </div>
         </div>
       </div>
+
       <div className="stat-item">
         <div className="card info-card sales-card">
           <div className="filter">
@@ -284,8 +341,15 @@ const Statistics = () => {
             <div className="d-flex align-items-center justify-content-start borser">
               <div className="w-100">
                 <div className="stat-graph">
-                  <b>Booking and conversion rate</b>
-                  <span>graph</span>
+                  <b
+                    className="truncated"
+                    data-full-text="Booking and conversion rate"
+                  >
+                    Booking and conversion rate
+                  </b>
+                  <SmoothLineChart
+                    array={shuffledArray.slice(0, 12)} // Show only the first 12 values
+                  />
                 </div>
                 <div className="progress mt-3">
                   <div

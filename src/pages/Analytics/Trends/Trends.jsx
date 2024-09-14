@@ -44,7 +44,6 @@ const Trends = () => {
   const options = {
     chart: {
       type: "area",
-      height: 350,
       zoom: { enabled: false },
     },
     dataLabels: { enabled: false },
@@ -61,12 +60,17 @@ const Trends = () => {
   const series = [{ name: "STOCK ABC", data: seriesData.prices }];
 
   return (
-    <div className="mt-5">
+    <div className="my-5">
       <div className="card">
         <div className="card-body row bg-white">
           <div className="col-lg-7">
             <h5 className="card-title">Current Trends</h5>
-            <table className="table table-secondary">
+            <table
+              className="table table-secondary"
+              style={{
+                verticalAlign: "middle",
+              }}
+            >
               <thead>
                 <tr>
                   <th>Stakeholders</th>
@@ -117,12 +121,7 @@ const Trends = () => {
           </div>
           <div className="col-lg-5">
             <h5 className="card-title">Growth Trend</h5>
-            <ApexCharts
-              options={options}
-              series={series}
-              type="area"
-              height={350}
-            />
+            <ApexCharts options={options} series={series} type="area" />
           </div>
         </div>
       </div>

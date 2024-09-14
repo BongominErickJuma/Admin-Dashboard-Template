@@ -1,77 +1,20 @@
-import React, { useState } from "react";
-import ReactApexChart from "react-apexcharts";
+import React from "react";
+
 import "./Graphs.css";
 import DonutChart from "../../../components/UI/DonutChart";
+import VerticalSegmentChart from "../../../components/UI/VerticalSegmentChart";
 
 const Graphs = () => {
-  // Column Chart configuration
-  const [columnChartOptions] = useState({
-    series: [
-      {
-        data: [44, 55, 57, 56],
-      },
-      {
-        data: [76, 85, 101, 98],
-      },
-      {
-        data: [35, 41, 36, 26],
-      },
-    ],
-    chart: {
-      type: "bar",
-      height: 350,
-      toolbar: {
-        show: false, // This hides the toolbar (menu-list icon)
-      },
-    },
-    plotOptions: {
-      bar: {
-        horizontal: false,
-        columnWidth: "55%",
-        endingShape: "rounded",
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: {
-      show: true,
-      width: 2,
-      colors: ["transparent"],
-    },
-    xaxis: {
-      categories: ["Feb", "Mar", "Apr", "May"],
-    },
-
-    fill: {
-      opacity: 1,
-    },
-    legend: {
-      show: false, // This hides the legend (series names)
-    },
-  });
-
-  // Donut Chart configuration
-  const [donutChartOptions] = useState({
-    series: [44, 55, 13, 43, 22],
-    chart: {
-      height: 400,
-      type: "donut",
-    },
-    labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
-  });
-
   return (
     <div className="mt-5">
       <div className="card bg-white">
         <div className="card-body row">
           <div className="col-lg-4">
-            <h5 className="card-title">All Revenue Contents and craft sales</h5>
-            <ReactApexChart
-              options={columnChartOptions}
-              series={columnChartOptions.series}
-              type="bar"
-              height={350}
+            <VerticalSegmentChart
+              title="Data for April to July"
+              labelType="days"
+              labelCount={20}
+              startMonth={3}
             />
           </div>
           <div className="col-lg-4">

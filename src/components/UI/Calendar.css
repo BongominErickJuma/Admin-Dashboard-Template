@@ -1,0 +1,48 @@
+.calendar {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.calendar .month-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.calendar .arrow {
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--accent-color);
+}
+
+.day.today {
+  background-color: #8cb8e1;
+  color: white;
+  border-radius: 2em;
+}
+
+.day.different-month {
+  color: #c0c0c0;
+}
+
+.calendar .day-names {
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar td {
+  text-align: center;
+  cursor: pointer;
+}
