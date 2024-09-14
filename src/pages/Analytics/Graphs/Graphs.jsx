@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import "./Graphs.css";
+import DonutChart from "../../../components/UI/DonutChart";
 
 const Graphs = () => {
   // Column Chart configuration
@@ -19,6 +20,9 @@ const Graphs = () => {
     chart: {
       type: "bar",
       height: 350,
+      toolbar: {
+        show: false, // This hides the toolbar (menu-list icon)
+      },
     },
     plotOptions: {
       bar: {
@@ -42,23 +46,26 @@ const Graphs = () => {
     fill: {
       opacity: 1,
     },
+    legend: {
+      show: false, // This hides the legend (series names)
+    },
   });
 
   // Donut Chart configuration
   const [donutChartOptions] = useState({
     series: [44, 55, 13, 43, 22],
     chart: {
-      height: 350,
+      height: 400,
       type: "donut",
     },
     labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
   });
 
   return (
-    <div className="row mt-5">
-      <div className="col-lg-4">
-        <div className="card bg-white">
-          <div className="card-body">
+    <div className="mt-5">
+      <div className="card bg-white">
+        <div className="card-body row">
+          <div className="col-lg-4">
             <h5 className="card-title">All Revenue Contents and craft sales</h5>
             <ReactApexChart
               options={columnChartOptions}
@@ -67,11 +74,7 @@ const Graphs = () => {
               height={350}
             />
           </div>
-        </div>
-      </div>
-      <div className="col-lg-4">
-        <div className="card bg-white">
-          <div className="card-body">
+          <div className="col-lg-4">
             <h5 className="card-title">Most Active Users By Country</h5>
 
             <table className="table">
@@ -105,18 +108,10 @@ const Graphs = () => {
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
-      <div className="col-lg-4">
-        <div className="card  bg-white">
-          <div className="card-body">
-            <h5 className="card-title">All Reviews from Stakeholders</h5>
-            <ReactApexChart
-              options={donutChartOptions}
-              series={donutChartOptions.series}
-              type="donut"
-              height={350}
-            />
+          <div className="col-lg-4">
+            <div className="donut">
+              <DonutChart title="All Reviews from stakeholders" />
+            </div>
           </div>
         </div>
       </div>

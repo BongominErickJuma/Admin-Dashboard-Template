@@ -49,10 +49,7 @@ const Trends = () => {
     },
     dataLabels: { enabled: false },
     stroke: { curve: "straight" },
-    subtitle: {
-      text: "Price Movements",
-      align: "left",
-    },
+
     xaxis: {
       type: "datetime",
       categories: seriesData.dates,
@@ -64,38 +61,52 @@ const Trends = () => {
   const series = [{ name: "STOCK ABC", data: seriesData.prices }];
 
   return (
-    <div className="row mt-5">
-      <div className="col-lg-7">
-        <div className="card">
-          <div className="card-body">
+    <div className="mt-5">
+      <div className="card">
+        <div className="card-body row bg-white">
+          <div className="col-lg-7">
             <h5 className="card-title">Current Trends</h5>
-            <table className="table table-sm">
+            <table className="table table-secondary">
               <thead>
                 <tr>
-                  <th scope="col">Stakeholders</th>
-                  <th scope="col">Month 1</th>
-                  <th scope="col">Month 2</th>
-                  <th scope="col">Change (%)</th>
-                  <th scope="col">Graph</th>
+                  <th>Stakeholders</th>
+                  <th>Month 1</th>
+                  <th>Month 2</th>
+                  <th>Change (%)</th>
+                  <th>Graph</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
+                  <td>stakehlder 1</td>
                   <td>Mark</td>
                   <td>Otto</td>
                   <td>@mdo</td>
                   <td>@mdo</td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
+                  <td>stakehlder 2</td>
                   <td>Jacob</td>
                   <td>Thornton</td>
                   <td>@fat</td>
                   <td>@fat</td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
+                  <td>stakehlder 3</td>
+                  <td>Bird</td>
+                  <td>@twitter</td>
+                  <td>@twitter</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <td>stakehlder 4</td>
+                  <td>Bird</td>
+                  <td>@twitter</td>
+                  <td>@twitter</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <td>stakehlder 5</td>
                   <td>Bird</td>
                   <td>@twitter</td>
                   <td>@twitter</td>
@@ -104,11 +115,7 @@ const Trends = () => {
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
-      <div className="col-lg-5">
-        <div className="card bg-white">
-          <div className="card-body">
+          <div className="col-lg-5">
             <h5 className="card-title">Growth Trend</h5>
             <ApexCharts
               options={options}

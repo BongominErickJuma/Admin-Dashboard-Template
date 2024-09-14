@@ -3,6 +3,7 @@ import Sidebar from "../../components/layouts/sidebar/Sidebar";
 import "./Analytics.css";
 import Graphs from "./Graphs/Graphs";
 import Trends from "./Trends/Trends";
+import Statistics from "./Statistics";
 
 const Analytics = () => {
   return (
@@ -10,88 +11,34 @@ const Analytics = () => {
       <Sidebar />
       <div id="main" className="analytics">
         <h1>Metrics Dashboard</h1>
-        <div className="statistics d-flex align-items-center justify-content-between">
-          <div className="stat-item">
-            <div class="card info-card revenue-card">
-              <div class="card-body">
-                <h5 class="card-title">Total Actions</h5>
-
-                <div class="d-flex align-items-center">
-                  <div>
-                    <h6>12.00</h6>
-                    <span class="text-success small pt-1 fw-bold">
-                      + 8% <i className="bi bi-arrow-up"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="stat-item">
-            <div class="card info-card revenue-card">
-              <div class="card-body">
-                <h5 class="card-title">Average Engagement Time</h5>
-
-                <div class="d-flex align-items-center">
-                  <div>
-                    <h6>2.00</h6>
-                    <span class="text-success small pt-1 fw-bold">
-                      -8% <i className="bi bi-arrow-down"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="stat-item">
-            <div class="card info-card revenue-card">
-              <div class="card-body">
-                <h5 class="card-title">Top Items Converted</h5>
-
-                <div class="d-flex align-items-center">
-                  <div>
-                    <h6>12.00</h6>
-                    <span class="text-success small pt-1 fw-bold">
-                      -30% <i className="bi bi-arrow-down"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="stat-item">
-            <div class="card info-card revenue-card">
-              <div class="card-body">
-                <h5 class="card-title">New Users</h5>
-
-                <div class="d-flex align-items-center">
-                  <div>
-                    <h6>300000</h6>
-                    <span class="text-success small pt-1 fw-bold">
-                      + 8% <i className="bi bi-arrow-up"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="stat-item">
-            <div class="card info-card revenue-card">
-              <div class="card-body">
-                <h5 class="card-title">Revenue Generated</h5>
-
-                <div class="d-flex align-items-center">
-                  <div>
-                    <h6>12.00</h6>
-                    <span class="text-success small pt-1 fw-bold">
-                      + 8% <i className="bi bi-arrow-up"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <select
+          className="form-select form-select-lg mb-3 months w-25"
+          aria-label=".form-select-lg example"
+        >
+          <option selected>Past Month</option>
+          <option>Past Month</option>
+          <option value="1">Past 4 Months</option>
+          <option value="2">past half Year</option>
+          <option value="3">Past Year</option>
+        </select>
+        <div className="d-flex align-items-start">
+          <h2>Activities Summary</h2>
+          <div className="d-flex align-items-start justify-content-between ms-3">
+            <i className="bi bi-people fs-3"></i>
+            <select
+              className="form-select form-select-lg mb-3  stakeholders"
+              aria-label=".form-select-lg example"
+            >
+              <option selected>All stakeholders</option>
+              <option>All stakeholders</option>
+              <option>Hotel</option>
+              <option value="1">Restaurant</option>
+              <option value="2">Craft shops</option>
+              <option value="3">Content Creators</option>
+            </select>
           </div>
         </div>
+        <Statistics />
         <Graphs />
         <Trends />
       </div>

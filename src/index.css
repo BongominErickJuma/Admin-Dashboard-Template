@@ -147,3 +147,7 @@ ul > li {
   grid-template-columns: repeat(7, 1fr);
   gap: 5px;
 }
+
+.donut {
+  overflow: hidden;
+}

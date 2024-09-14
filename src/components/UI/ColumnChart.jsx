@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
-const ColumnChart = () => {
+const ColumnChart = (props) => {
   const [columnChartOptions] = useState({
     series: [
       {
@@ -20,6 +20,9 @@ const ColumnChart = () => {
     chart: {
       type: "bar",
       height: 350,
+      toolbar: {
+        show: false,  // This hides the toolbar (menu-list icon)
+      },
     },
     plotOptions: {
       bar: {
@@ -53,12 +56,15 @@ const ColumnChart = () => {
     fill: {
       opacity: 1,
     },
+    legend: {
+      show: false, // This hides the legend (series names)
+    },
   });
 
   return (
     <div className="card bg-white mt-3">
       <div className="card-body">
-        <h5 className="card-title">Total Content Created</h5>
+        <h5 className="card-title">{props.title}</h5>
         <ReactApexChart
           options={columnChartOptions}
           series={columnChartOptions.series}

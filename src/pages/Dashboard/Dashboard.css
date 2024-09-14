@@ -72,3 +72,16 @@
   color: #4154f1;
   background: #f6f6fe;
 }
+
+.stat-graph {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-graph b {
+  text-wrap: nowrap;
+  width: 40%;
+  overflow: hidden;
+}
