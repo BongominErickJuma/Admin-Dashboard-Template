@@ -132,3 +132,11 @@ ul > li {
   box-shadow: none;
   border: 1px solid #ccc;
 }
+.form-select {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}

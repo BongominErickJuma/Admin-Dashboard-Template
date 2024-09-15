@@ -15,10 +15,6 @@
   background-color: rgba(220, 53, 69, 0.3) !important;
   cursor: pointer;
 }
-.analytics .form-select {
-  border: none;
-  box-shadow: none;
-}
 
 .analytics option {
   border: none;

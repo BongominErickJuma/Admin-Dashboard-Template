@@ -1,0 +1,78 @@
+.tourism-container {
+  height: clamp(300px, 50vh, 500px);
+}
+
+.tourism-container .content-area {
+  height: 70%;
+  background-color: #e6e6e6;
+}
+
+.tourism-container .attraction-sidebar {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.tourism-container .attraction-sidebar h4 {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  position: fixed;
+  width: fit-content;
+}
+
+.tourism-container .attraction-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 60px 0 0 0;
+}
+
+.tourism-container .attraction-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.tourism-container .attraction-image {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.tourism-container .attraction-details h5 {
+  margin: 0;
+}
+
+.tourism-container .attraction-details p {
+  color: #666;
+}
+
+.category-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.category-button {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.natural-attractions {
+  background-color: #c7e6c7;
+}
+
+.unique-experience {
+  background-color: #e3d1f3;
+}
+
+.hotel-accommodation {
+  background-color: #bce3e3;
+}

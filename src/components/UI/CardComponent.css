@@ -1,0 +1,50 @@
+/* Styling for individual cards */
+.product-card {
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card .card-image {
+  width: 100%;
+}
+
+.product-card .card-content {
+  padding: 10px;
+}
+
+.product-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.product-card .card-price {
+  font-size: 24px;
+  color: green;
+  margin: 5px 0;
+}
+
+.product-card .card-author {
+  color: #888;
+  margin: 5px 0;
+}
+
+.product-card .card-button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.product-card .card-button:hover {
+  background-color: #e64a19;
+}

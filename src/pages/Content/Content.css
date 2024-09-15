@@ -1,13 +1,35 @@
 /* Add this to your CSS file or inside a <style> tag */
+.content-header {
+  z-index: 999;
+  background: inherit;
+  height: 200px;
+  background-color: var(--background-color);
+  margin-left: 230px;
+  padding: 20px 30px 0 30px;
+}
+
 .custom-select {
   font-size: 1rem !important;
   padding: 0.65em;
 }
-
-.content-navbar .navbar-item {
-  padding: 1em 0;
+.content-navbar {
+  background: var(--background-color);
 }
-.content-navbar .navbar-item:hover {
+
+.content-navbar .nav-link {
+  padding: 1em 0;
+  background: var(--background-color);
+}
+.content-navbar .nav-link:hover {
   background-color: rgba(255, 0, 0, 0.3);
   cursor: pointer;
+}
+
+.content-navbar .nav-link.active {
+  background-color: inherit !important;
+  border-bottom: 3px solid red !important;
+}
+
+.content .tab-content {
+  margin-top: 250px !important;
 }
